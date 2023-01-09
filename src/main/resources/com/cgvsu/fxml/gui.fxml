@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.cgvsu.GuiController">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="File1">
+            <MenuItem mnemonicParsing="false" onAction="#onOpenModel1MenuItemClick" text="Load Model">
+            <accelerator>
+                <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+            </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="File2">
+            <MenuItem mnemonicParsing="false" onAction="#onOpenModel2MenuItemClick" text="Load Model">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Upload1">
+            <MenuItem mnemonicParsing="false" onAction="#onUploadModel1MenuItemClick" text="Save Model1">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Upload2">
+            <MenuItem mnemonicParsing="false" onAction="#onUploadModel2MenuItemClick" text="Save Model2">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Camera Options">
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Forward" text="Forward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="w" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Backward" text="Backward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="s" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Left" text="Left">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="a" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Right" text="Right">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="d" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Up" text="Up">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="q" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera1Down" text="Down">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="e" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Forward" text="Forward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="i" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Backward" text="Backward">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="k" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Left" text="Left">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="j" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Right" text="Right">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="l" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Up" text="Up">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="u" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#handleCamera2Down" text="Down">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="o" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+   <TabPane layoutY="26.0" prefHeight="606.0" prefWidth="1713.0">
+     <tabs>
+       <Tab text="Tab 1">
+         <content>
+           <AnchorPane minHeight="870.0" minWidth="1600.0" prefHeight="436.0" prefWidth="0.0">
+                  <children>
+                     <Canvas fx:id="canvas1" height="870.0" layoutX="14.0" layoutY="14.0" width="1600" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+       <Tab text="Tab 2">
+         <content>
+           <AnchorPane minHeight="900.0" minWidth="1600.0" prefHeight="290.0" prefWidth="562.0">
+                  <children>
+                     <Canvas fx:id="canvas2" height="870.0" layoutX="156.0" layoutY="140.0" width="1600.0" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+     </tabs>
+   </TabPane>
+    <Button fx:id="butt1" layoutX="219.0" layoutY="1.0" mnemonicParsing="false" onAction="#butt1Click" text="Activate first cam" textAlignment="CENTER" />
+    <Button fx:id="butt2"  layoutX="330.0" layoutY="1.0" mnemonicParsing="false" onAction="#butt2Click" text="Activate second cam" textAlignment="CENTER" />
+
+</AnchorPane>
